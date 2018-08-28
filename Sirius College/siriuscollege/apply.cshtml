@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sirius College Want To Apply?</title>
+    <link rel="shortcut icon" href="images/college-icon.png" />
+    <link href="css/style-college.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Welcome to Sirius College, Hull, a forward thinking, contemporary and successful college where learning is an adventure that seeks to challenge, inspire and engage every learner." />
+    <meta name="keywords" content="sirius, college, hull, yorkshire, academic, success, sixthform, ucas, btec, a-level" />
+    <meta name="author" content="John Allison" />
+
+</head>
+
+<body>
+    <header>
+        <a href="college-index.html"><img src="images/college-logo.png" alt="Sirius College"></a>
+        <span class="thick">Sirius College</span><br />
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="college-index.html">Home</a></li>
+            <li>
+                <a href="college-index.html">Courses<span class="caret"></span><br /></a>
+                <div>
+                    <ul>
+                        <li><a href="courses-alevel.html">A Levels</a></li>
+                        <li><a href="courses-btec.html">BTECs</a></li>
+                        <li><a href="apply.cshtml">Want To Apply?</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="facilities.html">Facilities<span class="caret"></span><br /></a>
+                <div>
+                    <ul>
+                        <li><a href="facilities-science.html">Science</a></li>
+                        <li><a href="facilities-hairdressing.html">Hairdressing</a></li>
+                        <li><a href="facilities-it.html">IT & Technology</a></li>
+                        <li><a href="facilities-socialarea.html">Social Area</a></li>
+                        <li><a href="facilities-studyarea.html">Study Area</a></li>
+                        <li><a href="facilities-jobs.html">Jobs & Work</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+                <a href="news.html">News<span class="caret"></span><br /></a>
+                <div>
+                    <ul>
+                        <li><a href="open.html">Open Days</a></li>
+                        <li><a href="twitter.html">Twitter</a></li>
+                        <li><a href="calendar.html">Event Calendar</a></li>
+                        <li><a href="map.html">Map</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <br />
+    @{
+        if (IsPost)
+        {
+            string forenames = Request["forenames"];
+            string surname = Request["surname"];
+            string apply_field = Request["applied_for[]"];
+            <div class="w3-row w3-padding-32">
+
+                <div class="w3-card-4 w3-padding-16">
+                    <header class="w3-container w3-burgundy w3-center"><h1>Apply</h1></header>
+                    <div class="w3-container w3-center">
+                        <p>Thank you @forenames @surname for applying for @apply_field</p>
+                    </div>
+                    </div>
+                </div>
+        }
+        else
+        {
+            <div class="w3-row w3-padding-32">
+
+                <div class="w3-card-4 w3-padding-16">
+                    <header class="w3-container w3-burgundy w3-center"><h1>Apply</h1></header>
+                    <div class="w3-container w3-center">
+                        <br />
+                        <div id="apply_holder">
+                            <h2 class="first">Your Details:</h2>
+                            <form id="apply_form" method="post" action="">
+                                <div class="form_cols">
+                                    <label for="surname" class="normal_form_label">Surname: <span class="go_red"></span><br /></label>
+                                    <input type="text" class="apply_field" id="surname" name="surname" size="30" required value="">
+                                    <input type="hidden" name="full_name" value="">
+                                </div>
+                                <div class="form_cols">
+                                    <label for="previous_surname" class="normal_form_label">Previous Surname:<br /></label>
+                                    <input type="text" class="apply_field" id="previous_surname" size="30" name="previous_surname">
+                                </div>
+                                <div class="form_cols">
+                                    <label for="forenames" class="normal_form_label">Forenames: <span class="go_red"></span><br /></label>
+                                    <input type="text" class="apply_field" id="forenames" name="forenames" size="30" required>
+                                </div>
+                                <div class="form_cols">
+                                    <label for="title" class="normal_form_label">Title: <span class="go_red"></span><br /></label>
+                                    <table width="30" class="radio_table">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="title" value="Mr" id="title" required>
+                                                    Mr
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="title" value="Mrs" id="title_1" required>
+                                                    Mrs
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="title" value="Miss" id="title_3" required>
+                                                    Miss
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="title" value="Ms" id="title_2" required>
+                                                    Ms
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="form_cols">
+                                    <label for="home_address" class="normal_form_label">Home Address: <span class="go_red"></span><br /></label>
+                                    <textarea name="home_address" rows="3" required class="apply_field" id="home_address" cols="30"></textarea>
+                                </div>
+                                <div class="form_cols">
+                                    <label for="postcode" class="normal_form_label">Postcode: <span class="go_red"></span><br /></label>
+                                    <input type="text" class="apply_field" id="postcode" name="postcode" required size="30">
+                                </div>
+                                <div class="form_cols">
+                                    <label for="mobile_number" class="normal_form_label">Mobile Number:><br /></label>
+                                    <input type="text" class="apply_field" id="mobile_number" name="mobile_number" size="30">
+                                </div>
+                                <div class="form_cols">
+                                    <label for="email_address" class="normal_form_label">Email Address: <span class="go_red"></span><br /></label>
+                                    <input type="email" class="apply_field" id="email_address" name="email_address" required size="30">
+                                </div>
+                                <div class="form_cols">
+                                    <label for="date_of_birth" class="normal_form_label">Date of Birth: <span class="go_red"></span><br /></label>
+                                    <input type="text" class="apply_field date" id="date_of_birth" name="date_of_birth" required size="30">
+                                </div>
+                                <div class="form_cols">
+                                    <label for="telephone_number" class="normal_form_label">Telephone Number: <span class="go_red"></span><br /></label>
+                                    <input type="text" class="apply_field" id="telephone_number" name="telephone_number" required size="30">
+                                </div>
+                                <h2>Course(s) Applied for:</h2>
+                                <div class="repeater_field">
+                                    <div class="form_cols" id="applied_for_holder">
+                                        <label for="applied_for" class="normal_form_label">Course(s) Applied for: <span class="go_red"></span><br /></label>
+                                        <input type="text" class="apply_field" id="applied_for" name="applied_for[]" required size="30">
+                                    </div>
+                                </div>
+                                <h2>Education and Training:</h2>
+                                <div class="four_cols">
+                                    <div class="col1">
+                                        <label for="school_college_attended_attending">School/College Attended/Attending: <span class="go_red"></span><br /></label>
+                                    </div>
+                                    <div class="col2">
+                                        <label for="from">From: <span class="go_red"></span><br /></label>
+                                    </div>
+                                    <div class="col3">
+                                        <label for="to">To: <span class="go_red"></span><br /></label>
+                                    </div>
+                                    <div class="col4">
+                                        <label for="full_part-time">Full/Part-time: <span class="go_red"></span><br /></label>
+                                    </div>
+                                </div>
+                                <div id="school_college_attended_attending_holder">
+                                    <div class="four_cols">
+                                        <div class="col1">
+                                            <input type="text" class="apply_field" id="school_college_attended_attending" name="school_college_attended_attending[]" required size="30">
+                                        </div>
+                                        <div class="col2">
+                                            <input type="text" class="apply_field date" id="from_to" name="from_to[]" required size="30">
+                                        </div>
+                                        <div class="col3">
+                                            <input type="text" class="apply_field date" id="to" name="to[]" required size="30">
+                                        </div>
+                                        <div class="col4">
+                                            <select name="full_part-time[]" class="select_field" required="required">
+                                                <option value="">Please select</option>
+                                                <option value="Full-time">Full-time</option>
+                                                <option value="Part-time">Part-time</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>Examinations/Qualifications:</h2>
+                                <div class="four_cols">
+                                    <div class="col1">
+                                        <label for="subject_course_include_current_course)">Subject/Course (include current course/s): <span class="go_red"></span><br /></label>
+                                    </div>
+                                    <div class="col2">
+                                        <label for="date_of_exam">Date of Exam: <span class="go_red"></span><br /></label>
+                                    </div>
+                                    <div class="col3">
+                                        <label for="results">Results: <span class="go_red"></span><br /></label>
+                                    </div>
+                                    <div class="col4">
+                                        <label for="predicted_grades">Predicted Grades:</label>
+                                    </div>
+                                </div>
+                                <div id="examinations_holder">
+                                    <div class="four_cols">
+                                        <div class="col1">
+                                            <input type="text" class="apply_field" id="subject_course_include_current_course" name="subject_course_include_current_course[]" required size="30">
+                                        </div>
+                                        <div class="col2">
+                                            <input type="text" class="apply_field date" id="date_of_exam" name="date_of_exam[]" required size="30">
+                                        </div>
+                                        <div class="col3">
+                                            <input type="text" class="apply_field" id="results" name="results[]" required size="30">
+                                        </div>
+                                        <div class="col4">
+                                            <input type="text" class="apply_field" id="predicted_grades-time" name="predicted_grades-time[]" required size="30">
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>Supporting Information:</h2>
+                                <div class="form_cols">
+                                    <label for="reasons_why_applying" class="normal_form_label supportingL">Please explain briefly the reasons why you want to apply for this course: <span class="go_red"></span><br /></label>
+                                    <textarea name="reasons_why_applying" rows="4" required class="apply_field" id="reasons_why_applying" cols="30"></textarea>
+                                </div>
+                                <br />
+                                <div class="form_cols">
+                                    <label for="hobbies_personal_interests_and_achievements" class="normal_form_label supportingL">Hobbies/Personal Interests and Achievements: <span class="go_red"></span><br /></label>
+                                    <textarea name="hobbies_personal_interests_and_achievements" rows="4" required class="apply_field" id="hobbies_personal_interests_and_achievements" cols="30"></textarea>
+                                </div>
+                                <br />
+                                <div class="form_cols">
+                                    <label for="work_experience_details supportingL" class="normal_form_label">Details of any Work Experience (including part-time jobs / voluntary work): <span class="go_red"></span><br /></label>
+                                    <textarea name="work_experience_details" rows="4" required class="apply_field" id="work_experience_details" cols="30"></textarea>
+                                </div>
+                                <h2>Referee:</h2>
+                                <p>If you are at school/college or have recently left, this should be your Headteacher/Tutor. Or it could be a recent employer or someone who will vouch for you. It should not be a relative or a friend.</p>
+                                <div class="form_cols">
+                                    <label for="name_of_referee" class="normal_form_label">Name of referee: <span class="go_red"></span><br /></label>
+                                    <input type="text" class="apply_field" id="name_of_referee" size="30" name="name_of_referee" required>
+                                </div>
+                                <div class="form_cols">
+                                    <label for="address_of_referee" class="normal_form_label supportingL">Address of Referee: <span class="go_red"></span><br /></label>
+                                    <textarea name="address_of_referee" rows="3" required class="apply_field" id="address_of_referee" cols="30"></textarea>
+                                </div>
+                                <div class="form_cols">
+                                    <label for="referee_postcode" class="normal_form_label">Postcode: <span class="go_red"></span><br /></label>
+                                    <input type="text" class="apply_field" id="referee_postcode" name="referee_postcode" required size="30">
+                                </div>
+                                <div class="form_cols">
+                                    <label for="referee_telephone_number" class="normal_form_label">Telephone Number: <span class="go_red"></span><br /></label>
+                                    <input name="referee_telephone_number" type="text" required class="apply_field" id="referee_telephone_number" size="30">
+                                </div>
+                                <div class="form_cols">
+                                    <p>For some courses a reference is essential, so it is important that you complete this section.</p>
+                                    <p>Please contact us if you have any difficulties with this. </p>
+                                    <p>
+                                        <strong>Declaration</strong><br />
+                                        By clicking 'submit application' below you are giving permission for the college to process this form (Data Protection Act 1998).
+                                    </p><br />
+                                    <input name="submit_apply" type="submit" id="submit_apply" value="Submit">
+                                    <div class="errors_box"></div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    }
+    <div id="footer">
+        <a href="https://twitter.com/siriusacademy"><img src="images/twitter-college.png" alt="Sirius College Twitter" style="width:50px;height:50px;"></a>
+        <br />
+        <p>Copyright Sirius Group & John Allison</p>
+    </div>
+
+</body>
+</html>
