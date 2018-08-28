@@ -1,0 +1,37 @@
+Game Foundation
+
+http://bit.ly/2DController
+Sebastian Lague
+Licensed under The MIT License (MIT)
+Copyright (c) 2015 Sebastian
+https://opensource.org/licenses/MIT
+
+https://www.assetstore.unity3d.com/en/#!/content/59478
+Eric Zhu
+Open Source Pause Menu
+Licensed under The MIT License (MIT)
+Copyright (c) 2016 Eric Zhu
+https://opensource.org/licenses/MIT
+
+Music
+
+"Crowd Hammer", "Neo Western"
+Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/
+
+Sound Effects
+http://www.bfxr.net/
+"You have full rights to all sounds made with bfxr, and are free to use them for any purposes, commercial or otherwise."
+
+Tilesets
+
+http://www.gameart2d.com/free-desert-platformer-tileset.html
+http://www.gameart2d.com/free-platformer-game-tileset.html
+Licensed under Public Domain Dedication
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Fonts
+
+Margarine is under the Open Font Licence, please refer to the OFL document
+http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
