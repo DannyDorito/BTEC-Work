@@ -1,5 +1,5 @@
 #Code by John Allison, 29-09-2014
-namelist = ["John", "Lee", "George", "Nathan", "GabeN", "Charlie"]
+namelist = ["John", "Lee", "George", "Nathan", "Gabe", "Charlie"]
 
 for name in namelist:
     print(namelist)

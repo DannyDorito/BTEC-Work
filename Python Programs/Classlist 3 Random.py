@@ -5,7 +5,7 @@ restart = True
 
 while restart == True:
     classlist = ["Lee", "John", "Nathan", "Charlie", "James", "Matty", "Joe", "Jack", 
-	"Nuno", "Andy", "George", "Nick", "Bill", "Ben", "Jon", "Jim", "GabeN", "Rick", 
+	"Nuno", "Andy", "George", "Nick", "Bill", "Ben", "Jon", "Jim", "Gabe", "Rick", 
 	"Dick", "Connor", "Glen", "Mario", "Luigi", "Kenny", "Hodor"]
 
     classlist1 = []

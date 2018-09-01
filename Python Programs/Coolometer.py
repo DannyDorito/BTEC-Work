@@ -5,7 +5,7 @@ def coolometer(name):
     if name in cool_list:
         result = "Cool"
     elif name in uncool_list:
-        result = "Super uncool m80" #Rekt
+        result = "Super uncool"
     else:
         result = "Uncool"
 

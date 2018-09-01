@@ -19,7 +19,7 @@ while restart == True:
     #Then Prints a value after 100
     print("The value of heads:", heads)
     print()
-    print("The valus of tails:", tails)
+    print("The value of tails:", tails)
 
     restart = False
 

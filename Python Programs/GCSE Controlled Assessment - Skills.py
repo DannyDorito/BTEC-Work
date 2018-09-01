@@ -12,12 +12,12 @@ while restart == True:
     dice12_1 = random.randrange(1,13)
     dice4_1 = random.randrange(1,5)
 
-    strength1 = int((dice12_1 / dice4_1) + 10) #Calculates strength for charater 1, rounds
+    strength1 = int((dice12_1 / dice4_1) + 10) #Calculates strength for character 1, rounds
 
     dice12_2 = random.randrange(1,13)
     dice4_2 = random.randrange(1,5)
 
-    skill1 = int((dice12_2 / dice4_2) + 10) #Calculates skill for charater 1, rounds
+    skill1 = int((dice12_2 / dice4_2) + 10) #Calculates skill for character 1, rounds
     
     print("Character One")
     print()
@@ -29,12 +29,12 @@ while restart == True:
     dice12_3 = random.randrange(1,13)
     dice4_3 = random.randrange(1,5)
 
-    strength2 = (int(dice12_3 / dice4_3) + 10) #Calculates strength for charater 2, rounds
+    strength2 = (int(dice12_3 / dice4_3) + 10) #Calculates strength for character 2, rounds
 
     dice12_4 = random.randrange(1,13)
     dice4_4 = random.randrange(1,5)
 
-    skill2 = (int(dice12_4 / dice4_4) + 10) #Calculates skill for charater 2, rounds
+    skill2 = (int(dice12_4 / dice4_4) + 10) #Calculates skill for character 2, rounds
 
     print("Character Two")
     print()
